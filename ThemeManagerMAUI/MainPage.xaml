@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="ThemeManagerMAUI.MainPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:ThemeManagerMAUI"
+    Title="Theme Manager MAUI"
+    x:DataType="local:MainPage">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="BoxView" x:Key="box">
+                <Setter Property="Color" Value="{DynamicResource Primary}"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25"
+            VerticalOptions="Center">
+
+            <Image
+                HeightRequest="200"
+                HorizontalOptions="Center"
+                SemanticProperties.Description="Cute dot net bot waving hi to you!"
+                Source="dotnet_bot.png" />
+
+            <Label
+                FontSize="32"
+                HorizontalOptions="Center"
+                SemanticProperties.HeadingLevel="Level1"
+                Text="Hello, World!" />
+
+            <Label
+                FontSize="18"
+                HorizontalOptions="Center"
+                SemanticProperties.Description="Welcome to dot net Multi platform App U I"
+                SemanticProperties.HeadingLevel="Level2"
+                Text="Welcome to Theme Manager/Switcher .NET Maui App Sample" />
+
+            <Button
+                x:Name="CounterBtn"
+                Clicked="OnCounterClicked"
+                HorizontalOptions="Center"
+                SemanticProperties.Hint="Counts the number of times you click"
+                Text="Click me" />
+
+            <!--<BoxView HeightRequest="10" Color="{DynamicResource Primary}" />-->
+            <BoxView HeightRequest="5" 
+                     Style="{StaticResource box}"/>
+
+            <Grid ColumnDefinitions="*, Auto">
+                <Label Grid.Column="0"
+                       Text="{Binding SelectedTheme, StringFormat='Selected Theme: {0}'}"
+                       VerticalOptions="Center"
+                       FontSize="16"/>
+                <Button Grid.Column="1"
+                        Text="Change Theme"
+                        HorizontalOptions="End"
+                        VerticalOptions="Center"
+                        Clicked="Button_Clicked_1"
+                        Padding="10, 0"
+                        HeightRequest="30"
+                        CornerRadius="4"
+                        FontSize="14"/>
+            </Grid>
+
+            <BoxView HeightRequest="5" 
+         Style="{StaticResource box}"/>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

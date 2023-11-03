@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ResourceDictionary
+    x:Class="ThemeManagerMAUI.Resources.Themes.Fire"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+
+    <Color x:Key="Primary">Red</Color>
+    <Color x:Key="Secondary">#DFD8F7</Color>
+    <Color x:Key="Tertiary">Maroon</Color>
+    <Color x:Key="PageBg">White</Color>
+    <Color x:Key="TextColor">Black</Color>
+
+    <SolidColorBrush x:Key="PrimaryBrush" Color="{StaticResource Primary}" />
+    <SolidColorBrush x:Key="SecondaryBrush" Color="{StaticResource Secondary}" />
+    <SolidColorBrush x:Key="TertiaryBrush" Color="{StaticResource Tertiary}" />
+
+</ResourceDictionary>
